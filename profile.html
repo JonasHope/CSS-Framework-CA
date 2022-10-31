@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile page">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://kit.fontawesome.com/059c84c64c.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar bg-info">
+        <div class="container-fluid">
+            <a href="home.html" class="navbar-brand fs-3">SoMe</a>
+            <div id="navbarNavAltMarkup">
+                <div class="navbar-nav d-flex flex-row">
+                    <a class="nav-link mx-3 fs-5" href="home.html">Home</a>
+                    <a class="nav-link mx-3 fs-5 active" aria-current="page" href="profile.html">Profile</a>
+                </div>
+            </div>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-lg-4 my-3">
+                <div class="card border-0">
+                    <div class="image text-center">
+                        <img src="/images/iron-man-gd8471636f_640.jpg" alt="profile image" class="img-fluid">
+                    </div>
+                    <div>
+                        <ul class="px-4 list-group-flush">
+                            <li class="card-title list-group-item">
+                                <h1 class="my-3 fs-4"><strong>Tony Stark</strong></h1>
+                            </li>
+                            <hr>
+                            <li class="d-flex align-items-center list-group-item mb-2">
+                                <i class="fa-solid fa-phone"></i>
+                                <a class="mx-2" href="tel:#" title="#">+47 123 123</a>
+                            </li>
+                            <li class="d-flex align-items-center list-group-item mb-2">
+                                <i class="fa-solid fa-envelope"></i>
+                                <a class="mx-2" href="#" title="#">TonyStark@gmail.com</a>
+                            </li>
+                            <li class="list-group-item d-flex mb-2">
+                                <div>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="d-flex flex-column mx-2">
+                                    <span class="mb-1">Stark tower</span>
+                                    <span class="mb-1">123 California</span>
+                                    <span class="mb-1">United States</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="px-4 my-3 card border-0">
+                    <div>
+                        <h2 class="my-3 fs-5">Contacts</h2>
+                    </div>
+                    <div>
+                        <div class="px-0">
+                            <div class="row">
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/captain-america-g2c747b2e7_640.jpg); min-height: 100px; width: 100px; background-size: cover;"></div>
+                                    <strong>Steve Rogers</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/bruce.png); min-height: 100px; width: 100px; background-size: cover;"></div>
+                                    <strong>Bruce Banner</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/peter.jpg); min-height: 100px; width: 100px; background-size: cover;"></div>
+                                    <strong>Peter Parker</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/black-wid.jpg); min-height: 100px; width:100px; background-size: cover;"></div>
+                                    <strong>Black Widow</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/thor.png); min-height: 100px; width: 100px; background-size: cover;"></div>
+                                    <strong>Thor Odinson</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/clint.jpg); min-height: 100px; width:100px; background-size: cover;"></div>
+                                    <strong>Clint Barton</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/nick.jpg); min-height: 100px; width:100px; background-size: cover;"></div>
+                                    <strong>Nick Fury</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div style="background-image: url(/images/loki.jpg); min-height: 100px; width:100px; background-size: cover;"></div>
+                                    <strong>Loki</strong>
+                                </div>
+
+                                <div class="col d-flex flex-column align-items-center my-3">
+                                    <div class="img-fluid img-thumbnail" style="background-image: url(/images/doc.jpg); min-height: 100px; width:100px; background-size: cover; background-position: center;"></div>
+                                    <strong>Doctor Strange</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 my-3">
+                <div class="panel panel-defualt card border-0">
+                    <div class="mx-3 my-3">
+                        <div class="status-upload nopaddingbtm">
+                            <form>
+                                <textarea class="form-control my-3" placeholder="Write your post here!"></textarea>
+                                <button type="submit" class="btn btn-success"> Share</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="col-md-12">
+                        <div class="media d-flex flex-row card border-0 my-3 px-2 py-2">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="/images/bruce.png" alt="profile picture" class="img img-fluid img-thumbnail me-1" style="max-width:70px">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading mb-0">
+                                    Bruce Banner
+                                </h3>
+                                    <small>
+                                        Today, 11:20 am
+                                    </small>
+                                <p class="mt-2">
+                                    Cras sit amet nibh libero,
+                                    in gravida nulla. 
+                                    Nulla vel metus scelerisque ante sollicitudin commodo. 
+                                    Cras purus odio.
+                                </p>
+                                <ul class="nav nav-pills ">
+                                    <li class="me-3 "><a class="text-decoration-none" href="#"><i class="fa-solid fa-thumbs-up me-2"></i>2015</a></li>
+                                    <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-comment me-2"></i>25</a></li>
+                                    <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-share me-2"></i>15</a></li> 
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="media d-flex flex-row card border-0 my-3 px-2 py-2">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="/images/peter.jpg" alt="profile picture" class="img img-fluid img-thumbnail me-1" style="max-width:70px">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading mb-0">
+                                    Peter Parker
+                                </h3>
+                                    <small>
+                                        yesterday, 08:14 am
+                                    </small>
+                                <p class="mt-2">
+                                    Cras sit amet nibh libero,
+                                    in gravida nulla. 
+                                    Nulla vel metus scelerisque ante sollicitudin commodo. 
+                                </p>
+                                <ul class="nav nav-pills">
+                                    <li class="me-3 "><a class="text-decoration-none" href="#"><i class="fa-solid fa-thumbs-up me-2"></i>2015</a></li>
+                                    <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-comment me-2"></i>25</a></li>
+                                    <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-share me-2"></i>15</a></li> 
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="media d-flex flex-row card border-0 my-3 px-2 py-2">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="/images/thor.png" alt="profile picture" class="img img-fluid img-thumbnail me-1" style="max-width:70px">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading mb-0">
+                                    Thor Odinson
+                                </h3>
+                                    <small>
+                                        yesterday, 12:10 am
+                                    </small>
+                                <p class="mt-2">
+                                    Cras sit amet nibh libero,
+                                    in gravida nulla. 
+                                    Nulla vel metus scelerisque ante sollicitudin commodo. 
+                                    Cras purus odio.
+                                    Cras sit amet nibh libero,
+                                    in gravida nulla. 
+                                    Nulla vel metus scelerisque ante sollicitudin commodo. 
+                                    Cras purus odio.
+                                </p>
+                                <ul class="nav nav-pills ">
+                                    <li class="me-3 "><a class="text-decoration-none" href="#"><i class="fa-solid fa-thumbs-up me-2"></i>2015</a></li>
+                                    <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-comment me-2"></i>25</a></li>
+                                    <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-share me-2"></i>15</a></li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
