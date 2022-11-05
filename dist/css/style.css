@@ -10782,4 +10782,16 @@ textarea.form-control-lg {
   line-height: 1.6;
 }
 
+/*---- Image controll ----*/
+.example-bg-image {
+  min-height: 80px;
+  width: 80px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-width {
+  max-width: 70px;
+}
+
 /*# sourceMappingURL=style.css.map */
