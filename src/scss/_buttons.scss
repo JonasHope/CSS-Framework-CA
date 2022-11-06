@@ -1,13 +1,13 @@
 .btn-primary {
-    background-color: #3b71ca;
-    color: #fff;
-    box-shadow: 0 4px 9px -4px #3b71ca;
+    background-color: $primary;
+    color: $white;
+    box-shadow: 0 4px 9px -4px $secondary;
 }
 
 .btn-secondary {
-    background-color: #4a525f;
-    color: #fff;
-    box-shadow: 0 4px 9px -4px #4e5f7a;
+    background-color: $secondary;
+    color: $white;
+    box-shadow: 0 4px 9px -4px $secondary;
 }
 
 .btn {

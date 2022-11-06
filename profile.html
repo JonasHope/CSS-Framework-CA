@@ -9,22 +9,34 @@
     <script src="https://kit.fontawesome.com/059c84c64c.js" crossorigin="anonymous"></script>
     <title>Profile</title>
 </head>
-<body class="bg-light">
-    <nav class="navbar bg-info">
-        <div class="container-fluid">
-            <a href="home.html" class="navbar-brand fs-3">Social network</a>
-            <div id="navbarNavAltMarkup">
-                <div class="navbar-nav d-flex flex-row">
-                    <a class="nav-link mx-3 fs-5" href="home.html">Home</a>
-                    <a class="nav-link mx-3 fs-5 active" aria-current="page" href="profile.html">Profile</a>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid justify-content-center justify-content-sm-between flex-column flex-sm-row">
+                <div class="d-flex align-items-center flex-column flex-sm-row">
+                    <a href="home.html" class="navbar-brand fs-3 logo">Social network</a>
+                    <div class="vertical mx-2 d-none d-sm-block"></div>
+                    <div id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex flex-row">
+                            <a class="nav-link mx-3 fs-5 active" aria-current="page" href="home.html">Home</a>
+                            <a class="nav-link mx-3 fs-5" href="profile.html">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex flex-row">
+                            <a class="nav-link mx-3 fs-6" href="index.html">Sign out</a>
+                        </div>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-4 col-lg-4 my-3">
@@ -68,47 +80,47 @@
                             <div class="row">
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/captain-america-g2c747b2e7_640.jpg);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/captain-america-g2c747b2e7_640.jpg);" alt="profile image"></div>
                                     <strong>Steve Rogers</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/bruce.png);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/bruce.png);" alt="profile image"></div>
                                     <strong>Bruce Banner</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/peter.jpg);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/peter.jpg);" alt="profile image"></div>
                                     <strong>Peter Parker</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/black-wid.jpg);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/black-wid.jpg);" alt="profile image"></div>
                                     <strong>Natasha</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/thor.png);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/thor.png);" alt="profile image"></div>
                                     <strong>Thor Odinson</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/clint.jpg);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/clint.jpg);" alt="profile image"></div>
                                     <strong>Clint Barton</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/nick.jpg);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/nick.jpg);" alt="profile image"></div>
                                     <strong>Nick Fury</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/loki.jpg);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/loki.jpg);" alt="profile image"></div>
                                     <strong>Loki</strong>
                                 </div>
 
                                 <div class="col d-flex flex-column align-items-center my-3">
-                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/doc.jpg);"></div>
+                                    <div class="img-fluid img-thumbnail example-bg-image" style="background-image: url(/images/doc.jpg);" alt="profile image"></div>
                                     <strong>Doctor Strange</strong>
                                 </div>
                             </div>
@@ -122,7 +134,7 @@
                         <div class="status-upload nopaddingbtm">
                             <form>
                                 <textarea class="form-control my-3" placeholder="Write your post here!"></textarea>
-                                <button type="submit" class="btn btn-success"> Share</button>
+                                <button type="submit" class="btn btn-primary"> Share</button>
                             </form>
                         </div>
                     </div>
@@ -203,7 +215,7 @@
                                     Nulla vel metus scelerisque ante sollicitudin commodo. 
                                     Cras purus odio.
                                 </p>
-                                <ul class="nav nav-pills ">
+                                <ul class="nav nav-pills">
                                     <li class="me-3 "><a class="text-decoration-none" href="#"><i class="fa-solid fa-thumbs-up me-2"></i>2015</a></li>
                                     <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-comment me-2"></i>25</a></li>
                                     <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fa-solid fa-share me-2"></i>15</a></li> 

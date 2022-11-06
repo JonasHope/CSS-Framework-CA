@@ -9,103 +9,82 @@
     <script src="https://kit.fontawesome.com/059c84c64c.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
-<body class="bg-light">
-    <nav class="navbar bg-info">
-        <div class="container-fluid">
-            <a href="home.html" class="navbar-brand fs-3">Social network</a>
-            <div id="navbarNavAltMarkup">
-                <div class="navbar-nav d-flex flex-row">
-                    <a class="nav-link mx-3 fs-5 active" aria-current="page" href="home.html">Home</a>
-                    <a class="nav-link mx-3 fs-5" href="profile.html">Profile</a>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid justify-content-center justify-content-sm-between flex-column flex-sm-row">
+                <div class="d-flex align-items-center flex-column flex-sm-row">
+                    <a href="home.html" class="navbar-brand fs-3 logo">Social network</a>
+                    <div class="vertical mx-2 d-none d-sm-block"></div>
+                    <div id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex flex-row">
+                            <a class="nav-link mx-3 fs-5 active" aria-current="page" href="home.html">Home</a>
+                            <a class="nav-link mx-3 fs-5" href="profile.html">Profile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex flex-row">
+                            <a class="nav-link mx-3 fs-6" href="index.html">Sign out</a>
+                        </div>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <div class="container">
         <div class="row">
-            <h1 class="d-flex justify-content-center my-3">Share your thoughts</h1>
-            <div class="col-xs-12 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-md-3 col-lg-4 mt-sm-3">
                 <div class="px-4 my-3 card border-0">
                     <div>
-                        <h2 class="my-3 fs-5">Contacts Online</h2>
+                        <h2 class="my-3 fs-5">Online</h2>
                     </div>
                     <div>
                         <div class="px-0">
-                            <div class="row">
+                            <div class="row justify-content-sm-center flex-wrap">
 
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3 ">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/captain-america-g2c747b2e7_640.jpg);"></div>
+                                <div class="col-6 col-sm-auto d-flex flex-column my-3 ">
+                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/captain-america-g2c747b2e7_640.jpg);" alt="profile image"></div>
                                     <div class="d-flex align-items-center">
                                         <i class="fa-solid fa-circle me-2 text-success d-sm-none"></i>
                                         <small><strong>Steve Rogers</strong></small>
                                     </div>
                                 </div>
 
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/bruce.png);"></div>
+                                <div class="col-6 col-sm-auto d-flex flex-column my-3">
+                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/bruce.png);" alt="profile image"></div>
                                     <div class="d-flex align-items-center">
                                         <i class="fa-solid fa-circle me-2 text-success d-sm-none"></i>
                                         <small><strong>Bruxe Banner</strong></small>
                                     </div>
                                 </div>
 
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/peter.jpg);"></div>
+                                <div class="col-6 col-sm-auto d-flex flex-column my-3">
+                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/peter.jpg);" alt="profile image"></div>
                                     <div class="d-flex align-items-center">
                                         <i class="fa-solid fa-circle me-2 text-success d-sm-none"></i>
                                         <small><strong>Peter Parker</strong></small>
                                     </div>
                                 </div>
 
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/black-wid.jpg);"></div>
+                                <div class="col-6 col-sm-auto d-flex flex-column my-3">
+                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/black-wid.jpg);" alt="profile image"></div>
                                     <div class="d-flex align-items-center">
                                         <i class="fa-solid fa-circle me-2 text-warning d-sm-none"></i>
                                         <small><strong>Natasha</strong></small>
                                     </div>
                                 </div>
 
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/thor.png);"></div>
+                                <div class="col-6 col-sm-auto d-flex flex-column my-3">
+                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/thor.png);" alt="profile image"></div>
                                     <div class="d-flex align-items-center">
                                         <i class="fa-solid fa-circle me-2 text-success d-sm-none"></i>
                                         <small><strong>Thor Odinson</strong></small>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/clint.jpg);"></div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-circle me-2 text-warning d-sm-none"></i>
-                                        <small><strong>Clint Barton</strong></small>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/nick.jpg);"></div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-circle me-2 text-warning d-sm-none"></i>
-                                        <small><strong>Nick Fury</strong></small>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" style="background-image: url(/images/loki.jpg);"></div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-circle me-2 text-warning d-sm-none"></i>
-                                        <small><strong>Loki</strong></small>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 col-sm-auto d-flex flex-column my-3">
-                                    <div class="d-none d-sm-block example-bg-image" class="img-fluid img-thumbnail" style="background-image: url(/images/doc.jpg);"></div>
-                                    <div class="d-flex align-items-center">
-                                        <i class="fa-solid fa-circle me-2 text-success d-sm-none"></i>
-                                        <small><strong>Doctor Strange</strong></small>
                                     </div>
                                 </div>
                             </div>
@@ -114,12 +93,13 @@
                 </div>
             </div>
             <div class="col-md-8 col-sm-12 my-3">
+                <h1 class="d-flex justify-content-center my-3 fs-2">Share your thoughts</h1>
                 <div class="panel panel-defualt card border-0">
                     <div class="mx-3 my-3">
                         <div class="status-upload nopaddingbtm">
                             <form>
-                                <textarea class="form-control my-3" placeholder="Write your post here!"></textarea>
-                                <button type="submit" class="btn btn-success"> Share</button>
+                                <textarea class="form-control my-3" rows= "3" cols= "25" placeholder="Write your post here!" required></textarea>
+                                <button type="submit" class="btn btn-primary"> Share</button>
                             </form>
                         </div>
                     </div>
