@@ -1,0 +1,52 @@
+@import "../scss/variables";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "../scss/buttons";
+
+nav {
+  z-index: 999;
+}
+
+/*---- Vertical line ----*/
+.vertical {
+    border-left: 2px solid $secondary;
+    height: 30px;
+}
+
+
+/*---- Image controll ----*/
+
+.example-bg-image {
+  min-height: 100px; 
+  min-width: 80px; 
+  background-size: cover;
+  background-position: center;
+}
+
+.img-width {
+    max-width: 70px;
+}
+
+/*---- Color controll ----*/
+
+.white, .card, nav {
+  background-color: $white;
+}
+
+.gray, body {
+  background-color: $gray;
+}
+
+.primary {
+  background-color: $primary;
+}
+
+.secondary {
+  background-color: $secondary;
+}
+
+.logo {
+  color: $primary;
+  font-weight: bold;
+}
