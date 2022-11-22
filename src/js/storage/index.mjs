@@ -1,11 +1,16 @@
-import { save } from "./save.mjs";
-import { remove } from "./remove.mjs";
-import { clear } from "./clear.mjs";
-import { load } from "./load.mjs";
+export function save(key, value) {
+    localStorage.setItem(key, JSON.stringify(value));
+}
 
-export default {
-    save,
-    remove,
-    clear,
-    load,
+export function load(key) {
+    try {
+        const value = localStorage.getItem(key);
+        return JSON.parse(value);
+    } catch {
+        return null
+    }
+}
+
+export function remove(key) {
+    localStorage.removeItem(key);
 }
