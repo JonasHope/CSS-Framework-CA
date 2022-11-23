@@ -11,7 +11,18 @@ if (path === '/pages/profile/register/') {
     loginFormListener();
 }
 
+import * as post from "./api/posts/index.mjs"
 
+/*post.createPost()
+post.updatePost()
+post.updatePost()
+post.getPost()*/
+//post.getPosts().then(console.log)
+
+post.getPost(3939).then(console.log)
+
+
+/*
 
 // Create a post
 
@@ -33,3 +44,13 @@ updatePost({
     title: "new example title",
     body: "updated body example"
 })
+
+
+
+// Delete a post
+
+import { removePost } from "./api/posts/delete.mjs";
+
+removePost(3938)
+
+*/
