@@ -11,16 +11,17 @@ if (path === '/pages/profile/register/') {
     loginFormListener();
 }
 
-import * as post from "./api/posts/index.mjs"
+import * as postMethods from "./api/posts/index.mjs"
 
-/*post.createPost()
+/*
+post.createPost()
 post.updatePost()
 post.updatePost()
-post.getPost()*/
-//post.getPosts().then(console.log)
+post.getPost()
+post.getPosts().then(console.log)
 
 post.getPost(3939).then(console.log)
-
+*/
 
 /*
 
@@ -54,3 +55,27 @@ import { removePost } from "./api/posts/delete.mjs";
 removePost(3938)
 
 */
+
+// Showing one specific fetched post
+/*
+import { renderPostTemplate } from "./templates/index.mjs"
+
+async function testTemplate() {
+    const posts = await postMethods.getPosts();
+    const post = posts.pop();
+    const container = document.querySelector("#post");
+    renderPostTemplate(post, container);
+}
+
+testTemplate()
+*/
+
+import * as templates from "./templates/index.mjs"
+
+async function testTemplate() {
+    const posts = await postMethods.getPosts();
+    const container = document.querySelector("#post");
+    templates.renderPostTemplates(posts, container);
+}
+
+testTemplate()

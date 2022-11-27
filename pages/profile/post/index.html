@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="home page">
+    <meta name="description" content="post specific">
     <link rel="stylesheet" href="/dist/css/style.css">
     <script src="https://kit.fontawesome.com/059c84c64c.js" crossorigin="anonymous"></script>
-    <title>Home</title>
+    <title>post</title>
 </head>
 <body>
     <header>
@@ -18,8 +18,8 @@
                     <div class="vertical mx-2 d-none d-sm-block"></div>
                     <div id="navbarNavAltMarkup">
                         <div class="navbar-nav d-flex flex-row">
-                            <a class="nav-link mx-3 fs-5 active" aria-current="page" href="/pages/feed/index.html">Home</a>
-                            <a class="nav-link mx-3 fs-5" href="/pages/profile/index.html">Profile</a>
+                            <a class="nav-link mx-3 fs-5" href="/pages/feed/index.html">Home</a>
+                            <a class="nav-link mx-3 fs-5 active" aria-current="page" href="/pages/profile/index.html">Profile</a>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                             <a class="nav-link mx-3 fs-6" href="index.html">Sign out</a>
                         </div>
                     </div>
-                    <form class="d-flex">
+                    <form id="specificPost" class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-primary" type="submit">Search</button>
                     </form>
@@ -41,16 +41,17 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-sm-12 my-3">
                 <h1 class="d-flex justify-content-center my-3 fs-2">Share your thoughts</h1>
-                <div class="panel panel-defualt card border-0">
+                <div class="card border-0">
                     <div class="mx-3 my-3">
                         <div class="status-upload nopaddingbtm">
-                            <form id="createPost">
+                            <form>
                                 <textarea class="form-control my-3" rows= "3" cols= "25" placeholder="Write your post here!" required></textarea>
                                 <button type="submit" class="btn btn-primary"> Share</button>
                             </form>
                         </div>
                     </div>
                 </div>
+                <div id="post"></div>
             </div>
         </div>
     </div>
