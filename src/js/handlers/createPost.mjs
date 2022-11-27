@@ -1,4 +1,4 @@
-import { createPost } from "../api/posts/index.mjs";
+import { createPost } from "../api/posts/create.mjs";
 
 export function createPostFormListener () {
     const form = document.querySelector("#createPost");
@@ -8,9 +8,9 @@ export function createPostFormListener () {
             event.preventDefault()
             const form = event.target;
             const formData = new FormData(form)
-            const postpost = Object.fromEntries(formData.entries())
+            const postData = Object.fromEntries(formData.entries())
 
-            createPost(postpost)
+            createPost(postData)
         })
     }
 };
