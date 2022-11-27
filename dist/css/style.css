@@ -8,7 +8,7 @@
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #cbbbec;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
@@ -10811,11 +10811,16 @@ nav {
 }
 
 .profileImage-Comments {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   padding: 0px;
+}
+
+.postImg {
+  max-height: 600px;
+  max-width: 100%;
 }
 
 /*---- Color controll ----*/
@@ -10833,6 +10838,14 @@ nav {
 
 .secondary {
   background-color: #53595A;
+}
+
+.purple {
+  background-color: #cbbbec;
+}
+
+.light-purple {
+  background-color: #e4dbf5;
 }
 
 .logo {

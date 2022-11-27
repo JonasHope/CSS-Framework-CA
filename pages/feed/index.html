@@ -41,20 +41,42 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-sm-12 my-3">
                 <h1 class="d-flex justify-content-center my-3 fs-2">Share your thoughts</h1>
-                <div class="panel panel-defualt card border-0">
+                <div class="card border-0">
                     <div class="mx-3 my-3">
-                        <div class="status-upload nopaddingbtm">
+                        <div>
                             <form id="createPost">
-                                <textarea class="form-control my-3" rows= "3" cols= "25" placeholder="Write your post here!" required></textarea>
-                                <button type="submit" class="btn btn-primary"> Share</button>
+                                <div class="form-group mb-3">
+                                    <label for="">Title</label>
+                                    <input class="form-control" type="text" name="title" required>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Body</label>
+                                    <textarea class="form-control" name="body" rows= "3" cols= "25" placeholder="Write your post here!" required></textarea>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Tags</label>
+                                    <input class="form-control" type="text" name="tags">
+                                </div>
+
+
+                                <div class="form-group mb-3">
+                                    <label for="">Media</label>
+                                    <input class="form-control" type="url" name="media">
+                                </div>
+
+                                <button class="btn btn-primary"> Share</button>
                             </form>
                         </div>
                     </div>
                 </div>
+                <div id="post"></div>
             </div>
         </div>
     </div>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/src/js/index.mjs" type="module"></script>
+  <script src="/src/js/feed.mjs" type="module"></script>
 </body>
 </html>

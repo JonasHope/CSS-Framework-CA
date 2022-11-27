@@ -1,75 +1,81 @@
 export function postTemplate(postData) {
 
+// All posts
     const post = document.createElement("div");
-    post.classList.add("posts", "card", "border-0", "my-2", "p-3");
-
     const postHeader = document.createElement("div");
-    postHeader.classList.add("gray", "p-3", "m-2")
-    post.appendChild(postHeader);
-
     const image = document.createElement("img");
-    image.classList.add("profileImage-Default");
+    const author = document.createElement("strong");
+    const postDate = document.createElement("small");
+    const content = document.createElement("div");
+    const title = document.createElement("strong");
+    const body = document.createElement("p");
+    const postImage = document.createElement("img");
+    const commentContainer = document.createElement("div");
+    const commentHeader = document.createElement("h3");
+
+    post.classList.add("posts", "card", "border-1", "my-5");
+    image.classList.add("profileImage-Default", "p-0", "col-6");
+    author.classList.add("ms-2", "col-8");
+    postDate.classList.add("col-12", "text-end", "ms-2")
+    postHeader.classList.add("purple", "p-2", "row", "m-0", "align-items-center")
+    content.classList.add("card", "border-0", "px-3", "pt-2");
+    title.classList.add("fs-6");
+    postImage.classList.add("postImg");
+    commentContainer.classList.add("row", "align-items-center", "mx-3", "my-3", "p-2", "light-purple");
+    commentHeader.classList.add("fs-6", "col-12", "my-2", "text-center");
+    
     image.setAttribute('src', postData.author.avatar);
     image.setAttribute('onerror', 'this.onerror=null;this.src="/images/man-in-suit-and-tie.png";');
-
-    postHeader.appendChild(image);
-
-    const author = document.createElement("strong");
-    author.classList.add("ms-2" );
-    author.innerText = postData.author.name;
-
-    postHeader.appendChild(author);
-
-    const content = document.createElement("div");
-    content.classList.add("card", "border-0", "mt-0", "p-2");
-
-    post.appendChild(content);
-
-    const title = document.createElement("strong");
-    title.innerText = postData.title;
-    title.classList.add("fs-6");
-
-    content.appendChild(title);
-
-    const body = document.createElement("p");
-    body.classList.add("my-3", "p-3");
-    body.innerText = postData.body;
-
-    content.appendChild(body);
-
-    const postImage = document.createElement("img");
     postImage.setAttribute('src', postData.media);
     postImage.setAttribute('onerror', 'this.onerror=null; this.src="/images/placeholder.jpg"');
 
-    content.appendChild(postImage)
+    author.innerText = postData.author.name;
+    postDate.innerText = postData.created;
+    title.innerText = postData.title;
+    body.innerText = postData.body;
+    commentHeader.innerText = 'Comments ' + postData.comments.length;
+
+    post.appendChild(postHeader);
+    postHeader.appendChild(image);
+    postHeader.appendChild(author);
+    postHeader.appendChild(postDate);
+    post.appendChild(content);
+    content.appendChild(title);
+    content.appendChild(body);
+    content.appendChild(postImage);
+    post.appendChild(commentContainer);
+    commentContainer.appendChild(commentHeader);
+
+// Fix post date
+
+    let dateUpdate = `${postData.created}`;
+    let result = dateUpdate.substring(0, 10);
+    postDate.innerText = result;
 
 
-    const commentContainer = document.createElement("div")
-    commentContainer.classList.add("row","align-items-center", "m-2", "p-3", "gray")
-    post.appendChild(commentContainer)
-
-    const commentHeader = document.createElement("h3")
-    commentHeader.innerText = 'Comments'
-    commentHeader.classList.add("fs-4", "col-12", "mb-4")
-    commentContainer.appendChild(commentHeader)
-
+// Comments for all posts
 
     const commentsBody = postData.comments;
     const bodyElement = commentsBody.map((newBody) => {
-        const createImg = document.createElement("img")
-        const createName = document.createElement("strong")
-        const createComment = document.createElement("small")
-        createComment.innerText = newBody.body
+        const createImg = document.createElement("img");
+        const createName = document.createElement("strong");
+        const createComment = document.createElement("small");
+
+        createComment.innerText = newBody.body;
         createName.innerText = newBody.author.name;
-        createName.classList.add("fs-6", "col-8")
+
+        createName.classList.add("fs-6", "col-8");
         createImg.classList.add("profileImage-Comments", "col-4");
-        createComment.classList.add("card", "col-11", "border-0", "p-2", "m-2", "my-2")
-        createImg.setAttribute('src', newBody.author.avatar)
-        createImg.setAttribute('alt', newBody.author.name)
+        createComment.classList.add("card", "col-12", "border-0", "p-2", "my-2");
+
+        createImg.setAttribute('src', newBody.author.avatar);
+        createImg.setAttribute('alt', newBody.author.name);
         createImg.setAttribute('onerror', 'this.onerror=null;this.src="/images/man-in-suit-and-tie.png";');
-        commentContainer.appendChild(createImg)
-        commentContainer.appendChild(createName)
-        commentContainer.appendChild(createComment)
+
+        commentContainer.appendChild(createImg);
+        commentContainer.appendChild(createName);
+        commentContainer.appendChild(createComment);
+        
 })
 
     console.log(postData)
