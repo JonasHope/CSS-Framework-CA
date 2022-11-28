@@ -29,7 +29,7 @@
                             <a class="nav-link mx-3 fs-6" href="index.html">Sign out</a>
                         </div>
                     </div>
-                    <form id="editPost" class="d-flex">
+                    <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-primary" type="submit">Search</button>
                     </form>
@@ -40,13 +40,33 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-sm-12 my-3">
-                <h1 class="d-flex justify-content-center my-3 fs-2">Share your thoughts</h1>
-                <div class="panel panel-defualt card border-0">
+                <h1 class="d-flex justify-content-center my-3 fs-2">Edit post</h1>
+                <div class="card border-0">
                     <div class="mx-3 my-3">
-                        <div class="status-upload nopaddingbtm">
-                            <form>
-                                <textarea class="form-control my-3" rows= "3" cols= "25" placeholder="Write your post here!" required></textarea>
-                                <button type="submit" class="btn btn-primary"> Share</button>
+                        <div>
+                            <form id="editPost" action="/pages/feed/index.html">
+                                <div class="form-group mb-3">
+                                    <label for="">Title</label>
+                                    <input class="form-control" type="text" name="title" required>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Body</label>
+                                    <textarea class="form-control" name="body" rows= "3" cols= "25" required></textarea>
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="">Tags</label>
+                                    <input class="form-control" type="text" name="tags">
+                                </div>
+
+
+                                <div class="form-group mb-3">
+                                    <label for="">Media</label>
+                                    <input class="form-control" type="url" name="media">
+                                </div>
+
+                                <button class="btn btn-primary">Save</button>
                             </form>
                         </div>
                     </div>

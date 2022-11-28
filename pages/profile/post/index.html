@@ -29,7 +29,7 @@
                             <a class="nav-link mx-3 fs-6" href="index.html">Sign out</a>
                         </div>
                     </div>
-                    <form id="specificPost" class="d-flex">
+                    <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-primary" type="submit">Search</button>
                     </form>
@@ -40,42 +40,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-sm-12 my-3">
-                <h1 class="d-flex justify-content-center my-3 fs-2">Share your thoughts</h1>
-                <div class="card border-0">
-                    <div class="mx-3 my-3">
-                        <div class="status-upload nopaddingbtm">
-                            <form id="createPost">
-                                <div class="form-group mb-3">
-                                    <label for="">Title</label>
-                                    <input class="form-control" type="text" name="title" required>
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <label for="">Body</label>
-                                    <textarea class="form-control" name="body" rows= "3" cols= "25" placeholder="Write your post here!" required></textarea>
-                                </div>
-
-                                <div class="form-group mb-3">
-                                    <label for="">Tags</label>
-                                    <input class="form-control" type="text" name="tags" required>
-                                </div>
-
-
-                                <div class="form-group mb-3">
-                                    <label for="">Media</label>
-                                    <input class="form-control" type="url" name="media" required>
-                                </div>
-
-                                <button class="btn btn-primary"> Share</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div id="post"></div>
+                <h1 class="d-flex justify-content-center my-3 fs-2">Post</h1>
+                <div id="specificPost"></div>
             </div>
         </div>
     </div>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/src/js/index.mjs" type="module"></script>
+  <script src="/src/js/specificPost.mjs" type="module"></script>
 </body>
 </html>
