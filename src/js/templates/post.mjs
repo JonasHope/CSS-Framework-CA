@@ -3,6 +3,7 @@ export function postTemplate(postData) {
 // All posts
     const post = document.createElement("div");
     const postHeader = document.createElement("div");
+    const viewPost = document.createElement("a");
     const image = document.createElement("img");
     const author = document.createElement("strong");
     const postDate = document.createElement("small");
@@ -28,17 +29,26 @@ export function postTemplate(postData) {
     image.setAttribute('onerror', 'this.onerror=null;this.src="/images/man-in-suit-and-tie.png";');
     postImage.setAttribute('src', postData.media);
     postImage.setAttribute('onerror', 'this.onerror=null; this.src="/images/placeholder.jpg"');
+    viewPost.setAttribute('href', `/pages/profile/post/?id=${postData.id}`)
 
     author.innerText = postData.author.name;
     postDate.innerText = postData.created;
     title.innerText = postData.title;
     body.innerText = postData.body;
     commentHeader.innerText = 'Comments ' + postData.comments.length;
+    viewPost.innerText = 'View post';
 
     post.appendChild(postHeader);
     postHeader.appendChild(image);
     postHeader.appendChild(author);
     postHeader.appendChild(postDate);
+    postHeader.appendChild(viewPost)
+        if (postData.author.name === "JonasHope") {
+        const editButton = document.createElement("a");
+        editButton.innerText = "Edit post"
+        editButton.setAttribute('href', "/pages/profile/post/edit/");
+        postHeader.appendChild(editButton);
+    }
     post.appendChild(content);
     content.appendChild(title);
     content.appendChild(body);

@@ -1,12 +1,13 @@
 import * as postMethods from "./api/posts/index.mjs"
-import * as templates from "./templates/index.mjs"
 import { renderPostTemplate } from "./templates/index.mjs";
 
-async function testTemplate() {
-const posts = await postMethods.getPosts();
-const post = posts.pop()
-const container = document.querySelector("#specificPost");
-renderPostTemplate(post, container);
-}
+async function viewPost() {
+    const params = new URLSearchParams(document.location.search)
+    const id = params.get("id")
 
-testTemplate()
+    const posts = await postMethods.getPost(id);
+    const container = document.querySelector("#specificPost");
+    renderPostTemplate(posts, container);
+    }
+
+viewPost()

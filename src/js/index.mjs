@@ -16,15 +16,3 @@ if (path === '/pages/profile/register/') {
 } else if (path === '/pages/profile/post/edit/') {
     updateFormListener()
 }
-
-
-/*
-import * as templates from "./templates/index.mjs"
-
-async function testTemplate() {
-    const posts = await postMethods.getPosts();
-    const container = document.querySelector("#post");
-    templates.renderPostTemplates(posts, container);
-}
-
-testTemplate()*/
