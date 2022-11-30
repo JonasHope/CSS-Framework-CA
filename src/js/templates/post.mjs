@@ -16,6 +16,7 @@ export function postTemplate(postData) {
     const commentForm = document.createElement("form");
     const commentTextarea = document.createElement("textarea");
     const commentButton = document.createElement("button");
+    const commentDiv = document.createElement("div");
 
     post.classList.add("posts", "card", "border-1", "my-5");
     image.classList.add("profileImage-Default", "p-0", "col-6");
@@ -27,7 +28,8 @@ export function postTemplate(postData) {
     postImage.classList.add("postImg");
     commentContainer.classList.add("row", "align-items-center", "mx-3", "my-3", "p-2", "light-purple");
     commentHeader.classList.add("fs-6", "col-12", "my-2", "text-center");
-    commentForm.classList.add("my-3", "d-flex", "flex-column", "justify-content-end")
+    commentForm.classList.add("commentPost")
+    commentDiv.classList.add("my-3", "d-flex", "flex-column", "justify-content-end")
     commentTextarea.classList.add("form-control")
     commentButton.classList.add("btn", "btn-primary", "my-2");
     
@@ -38,7 +40,7 @@ export function postTemplate(postData) {
     viewPost.setAttribute('href', `/pages/profile/post/?id=${postData.id}`)
     commentTextarea.setAttribute('name', 'body')
     commentTextarea.setAttribute('placeholder', 'write comment here')
-    commentTextarea.setAttribute('id', 'commentPost')
+    commentButton.setAttribute('id', 'commentBtn')
 
     author.innerText = postData.author.name;
     postDate.innerText = postData.created;
@@ -66,8 +68,9 @@ export function postTemplate(postData) {
     post.appendChild(commentContainer);
     commentContainer.appendChild(commentHeader);
     commentContainer.appendChild(commentForm)
-    commentForm.appendChild(commentTextarea)
-    commentForm.appendChild(commentButton)
+    commentDiv.appendChild(commentTextarea)
+    commentDiv.appendChild(commentButton)
+    commentForm.appendChild(commentDiv)
 
 // Fix post date
 
