@@ -27,7 +27,7 @@ export function postTemplate(postData) {
     postImage.classList.add("postImg");
     commentContainer.classList.add("row", "align-items-center", "mx-3", "my-3", "p-2", "light-purple");
     commentHeader.classList.add("fs-6", "col-12", "my-2", "text-center");
-    commentForm.classList.add("commentPost", "my-3", "d-flex", "flex-column", "justify-content-end")
+    commentForm.classList.add("my-3", "d-flex", "flex-column", "justify-content-end")
     commentTextarea.classList.add("form-control")
     commentButton.classList.add("btn", "btn-primary", "my-2");
     
@@ -38,6 +38,7 @@ export function postTemplate(postData) {
     viewPost.setAttribute('href', `/pages/profile/post/?id=${postData.id}`)
     commentTextarea.setAttribute('name', 'body')
     commentTextarea.setAttribute('placeholder', 'write comment here')
+    commentTextarea.setAttribute('id', 'commentPost')
 
     author.innerText = postData.author.name;
     postDate.innerText = postData.created;

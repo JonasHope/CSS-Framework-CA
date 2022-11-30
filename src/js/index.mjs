@@ -12,11 +12,12 @@ if (path === '/pages/profile/register/') {
     regFormListener();
 } else if (path === '/index.html') {
     loginFormListener();
-} else if (path === '/pages/feed/index.html') {
+} /*else if (path === '/pages/feed/index.html') {
     createPostFormListener()
-} else if (path === '/pages/profile/post/edit/') {
+    console.log('createPostFormListener')
+}*/ else if (path === '/pages/profile/post/edit/') {
     updateFormListener()
-} else if (path === `/pages/feed/index.html`) {
+} else if (path === '/pages/feed/index.html') {
     commentPostFormListener()
-    console.log(commentPostFormListener)
+    console.log('it works')
 }
