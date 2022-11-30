@@ -13,6 +13,9 @@ export function postTemplate(postData) {
     const postImage = document.createElement("img");
     const commentContainer = document.createElement("div");
     const commentHeader = document.createElement("h3");
+    const commentForm = document.createElement("form");
+    const commentTextarea = document.createElement("textarea");
+    const commentButton = document.createElement("button");
 
     post.classList.add("posts", "card", "border-1", "my-5");
     image.classList.add("profileImage-Default", "p-0", "col-6");
@@ -24,12 +27,17 @@ export function postTemplate(postData) {
     postImage.classList.add("postImg");
     commentContainer.classList.add("row", "align-items-center", "mx-3", "my-3", "p-2", "light-purple");
     commentHeader.classList.add("fs-6", "col-12", "my-2", "text-center");
+    commentForm.classList.add("commentPost", "my-3", "d-flex", "flex-column", "justify-content-end")
+    commentTextarea.classList.add("form-control")
+    commentButton.classList.add("btn", "btn-primary", "my-2");
     
     image.setAttribute('src', postData.author.avatar);
     image.setAttribute('onerror', 'this.onerror=null;this.src="/images/man-in-suit-and-tie.png";');
     postImage.setAttribute('src', postData.media);
     postImage.setAttribute('onerror', 'this.onerror=null; this.src="/images/placeholder.jpg"');
     viewPost.setAttribute('href', `/pages/profile/post/?id=${postData.id}`)
+    commentTextarea.setAttribute('name', 'body')
+    commentTextarea.setAttribute('placeholder', 'write comment here')
 
     author.innerText = postData.author.name;
     postDate.innerText = postData.created;
@@ -37,6 +45,7 @@ export function postTemplate(postData) {
     body.innerText = postData.body;
     commentHeader.innerText = 'Comments ' + postData.comments.length;
     viewPost.innerText = 'View post';
+    commentButton.innerText = 'Post'
 
     post.appendChild(postHeader);
     postHeader.appendChild(image);
@@ -55,6 +64,9 @@ export function postTemplate(postData) {
     content.appendChild(postImage);
     post.appendChild(commentContainer);
     commentContainer.appendChild(commentHeader);
+    commentContainer.appendChild(commentForm)
+    commentForm.appendChild(commentTextarea)
+    commentForm.appendChild(commentButton)
 
 // Fix post date
 
@@ -88,7 +100,7 @@ export function postTemplate(postData) {
         
 })
 
-    console.log(postData)
+    //console.log(postData)
     return post;
 }
 
