@@ -1,3 +1,7 @@
+import { commentPostFormListener } from "../handlers/commentPost.mjs";
+commentPostFormListener()
+
+
 export function postTemplate(postData) {
 
 // All posts
@@ -55,7 +59,10 @@ export function postTemplate(postData) {
     postHeader.appendChild(author);
     postHeader.appendChild(postDate);
     postHeader.appendChild(viewPost)
-        if (postData.author.name === "JonasHope") {
+
+    const profileName = JSON.parse(window.localStorage.getItem('profile'))
+    console.log(profileName.name)
+        if (profileName.name === postData.author.name) {
         const editButton = document.createElement("a");
         editButton.innerText = "Edit post"
         editButton.setAttribute('href', "/pages/profile/post/edit/");
