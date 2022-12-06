@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="hedit post">
+    <meta name="description" content="signin page, create an account">
     <link rel="stylesheet" href="/dist/css/style.css">
     <script src="https://kit.fontawesome.com/059c84c64c.js" crossorigin="anonymous"></script>
-    <title>Edit post</title>
+    <title>Edit Profile</title>
 </head>
     <header>
         <nav class="navbar">
@@ -50,44 +50,71 @@
         </nav>
     </header>
     <body>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-sm-12 my-3">
-                    <h1 class="d-flex justify-content-center my-3 fs-2">Edit post</h1>
-                    <div class="card border-0">
-                        <div class="mx-3 my-3">
-                            <div>
-                                <form id="editPost" action="/pages/feed/index.html">
-                                    <div class="form-group mb-3">
-                                        <label for="">Title</label>
-                                        <input class="form-control" type="text" name="title" required>
-                                    </div>
-                                
-                                    <div class="form-group mb-3">
-                                        <label for="">Body</label>
-                                        <textarea class="form-control" name="body" rows= "3" cols= "25" required></textarea>
-                                    </div>
-                                
-                                    <div class="form-group mb-3">
-                                        <label for="">Tags</label>
-                                        <input class="form-control" type="text" name="tags">
-                                    </div>
-                                
-                                
-                                    <div class="form-group mb-3">
-                                        <label for="">Media</label>
-                                        <input class="form-control" type="url" name="media">
-                                    </div>
-                                
-                                    <button class="btn btn-primary">Save</button>
-                                </form>
-                            </div>
+      <section class="vh-100 bg-light">
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+              <div class="card text-black rounded-5">
+                <div class="card-body p-md-5">
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                    
+                      <h1 class="text-center fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit profile</h1>
+                    
+                      <form id="editProfile" class="mx-1 mx-md-4">
+                      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                          <div class="form-floating flex-fill mb-0">
+                            <input type="text" class="form-control" placeholder="Name" name="name" >
+                            <label class="form-label" for="">Your Name</label>
+                          </div>
                         </div>
+                      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                          <div class="form-floating flex-fill mb-0">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <label class="form-label" for="">Your Email</label>
+                          </div>
+                        </div>
+                      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div class="form-floating flex-fill mb-0">
+                            <input type="" class="form-control" placeholder="URL for banner" name="banner">
+                            <label class="form-label" for="">Banner</label>
+                          </div>
+                        </div>
+                      
+                        <div class="d-flex flex-row align-items-center mb-4">
+                          <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                          <div class="form-floating flex-fill mb-0">
+                            <input type="" class="form-control" placeholder="URL for Avater" name="avatar">
+                            <label class="form-label" for="">Avatar</label>
+                          </div>
+                        </div>
+                      
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                          <button type="submit" class="btn btn-primary btn-lg">Update Profile</button>
+                        </div>
+                      
+                      </form>
+                    
                     </div>
+                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                      <img src="/images/group-gf0b7a7f1c_640.png" class="img-fluid">
+                    
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </section>
       <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
       <script src="/src/js/index.mjs" type="module"></script>
+      <script src="/src/js/handlers/register.mjs" type="module"></script>
     </body>
 </html>

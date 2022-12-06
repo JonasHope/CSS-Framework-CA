@@ -1,8 +1,8 @@
-import { postComment } from "../api/posts/comment.mjs";
+/*import { postComment } from "../api/posts/comment.mjs";
 
 export function commentPostFormListener() {
-    const commentForm = document.querySelectorAll(".commentPost");
-    console.log(commentForm)
+    //const commentForm = document.querySelectorAll(".commentPost");
+    //console.log(commentForm)
     commentForm.forEach((formElement) => {
         if (formElement) {
             commentForm.addEventListener("submit", (event) => {
@@ -15,4 +15,4 @@ export function commentPostFormListener() {
             });
         };
     });
-};
+};*/

@@ -19,10 +19,6 @@ export async function updateFormListener() {
 
         button.disabled = false;
 
-        button.onclick = function() {
-            location.href = "/pages/feed/index.html"
-        }
-
         form.addEventListener("submit", (event) => {
             event.preventDefault()
             const form = event.target;
@@ -31,6 +27,10 @@ export async function updateFormListener() {
             post.id = id;
 
             updatePost(post)
+
+            setTimeout(function() {
+                window.location.href = "/pages/feed/index.html"
+            }, 2000);
         })
     }
 };

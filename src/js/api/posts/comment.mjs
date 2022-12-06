@@ -2,11 +2,11 @@ import { authFetch } from "../authFetch.mjs";
 import { API_SOCIAL_URL } from "../const.mjs";
 
 const action = "/posts";
-const comment = "/comment"
+const comment = "/comment/"
 const method = "post";
 
 export async function postComment(postData) {
-    if (!id) {
+    if (!postData.id) {
     throw new Error("To comment on a post, a postID is required")
     };
 

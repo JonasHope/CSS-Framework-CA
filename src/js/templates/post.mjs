@@ -1,6 +1,4 @@
-import { commentPostFormListener } from "../handlers/commentPost.mjs";
-commentPostFormListener()
-
+import { postComment } from "../api/posts/comment.mjs";
 
 export function postTemplate(postData) {
 
@@ -11,40 +9,77 @@ export function postTemplate(postData) {
     const image = document.createElement("img");
     const author = document.createElement("strong");
     const postDate = document.createElement("small");
+    
     const content = document.createElement("div");
     const title = document.createElement("strong");
     const body = document.createElement("p");
     const postImage = document.createElement("img");
+    
     const commentContainer = document.createElement("div");
     const commentHeader = document.createElement("h3");
-    const commentForm = document.createElement("form");
-    const commentTextarea = document.createElement("textarea");
-    const commentButton = document.createElement("button");
-    const commentDiv = document.createElement("div");
+
+        const commentDiv = document.createElement("div");
+        const commentForm = document.createElement("form");
+        const commentTextarea = document.createElement("textarea");
+        const commentButton = document.createElement("button");
+
+        commentForm.classList.add("commentPost")
+        commentDiv.classList.add("my-3", "d-flex", "flex-column", "justify-content-end")
+        commentTextarea.classList.add("form-control")
+        commentButton.classList.add("btn", "btn-primary", "my-2");
+
+        commentButton.innerText = 'Post'
+
+        commentTextarea.setAttribute('name', 'body')
+        commentTextarea.setAttribute('placeholder', 'write comment here')
+        commentButton.setAttribute('id', 'commentBtn')
+        commentForm.setAttribute('id', postData.id)
+
+        commentContainer.appendChild(commentForm)
+        commentDiv.appendChild(commentTextarea)
+        commentDiv.appendChild(commentButton)
+        commentForm.appendChild(commentDiv)
+
+            if (commentForm) {
+                commentForm.addEventListener('submit', (event) => {
+                
+                    event.preventDefault()
+
+                    const id = `${postData.id}`
+                    
+                    const formData = new FormData(commentForm)
+
+                    const post = Object.fromEntries(formData.entries())
+
+                    post.id = id
+
+                    postComment(post);
+
+                    setTimeout(function() {
+                    window.location.href = "/pages/feed/index.html"
+                    }, 1000);
+                })
+            }
 
     post.classList.add("posts", "card", "border-1", "my-5");
+    
     image.classList.add("profileImage-Default", "p-0", "col-6");
     author.classList.add("ms-2", "col-8");
     postDate.classList.add("col-12", "text-end", "ms-2")
     postHeader.classList.add("purple", "p-2", "row", "m-0", "align-items-center")
+    
     content.classList.add("card", "border-0", "px-3", "pt-2");
     title.classList.add("fs-6");
     postImage.classList.add("postImg");
+    
     commentContainer.classList.add("row", "align-items-center", "mx-3", "my-3", "p-2", "light-purple");
     commentHeader.classList.add("fs-6", "col-12", "my-2", "text-center");
-    commentForm.classList.add("commentPost")
-    commentDiv.classList.add("my-3", "d-flex", "flex-column", "justify-content-end")
-    commentTextarea.classList.add("form-control")
-    commentButton.classList.add("btn", "btn-primary", "my-2");
     
     image.setAttribute('src', postData.author.avatar);
     image.setAttribute('onerror', 'this.onerror=null;this.src="/images/man-in-suit-and-tie.png";');
     postImage.setAttribute('src', postData.media);
     postImage.setAttribute('onerror', 'this.onerror=null; this.src="/images/placeholder.jpg"');
     viewPost.setAttribute('href', `/pages/profile/post/?id=${postData.id}`)
-    commentTextarea.setAttribute('name', 'body')
-    commentTextarea.setAttribute('placeholder', 'write comment here')
-    commentButton.setAttribute('id', 'commentBtn')
 
     author.innerText = postData.author.name;
     postDate.innerText = postData.created;
@@ -52,32 +87,26 @@ export function postTemplate(postData) {
     body.innerText = postData.body;
     commentHeader.innerText = 'Comments ' + postData.comments.length;
     viewPost.innerText = 'View post';
-    commentButton.innerText = 'Post'
 
     post.appendChild(postHeader);
     postHeader.appendChild(image);
     postHeader.appendChild(author);
     postHeader.appendChild(postDate);
     postHeader.appendChild(viewPost)
-
-    const profileName = JSON.parse(window.localStorage.getItem('profile'))
-    console.log(profileName.name)
-        if (profileName.name === postData.author.name) {
-        const editButton = document.createElement("a");
-        editButton.innerText = "Edit post"
-        editButton.setAttribute('href', "/pages/profile/post/edit/");
-        postHeader.appendChild(editButton);
-    }
     post.appendChild(content);
     content.appendChild(title);
     content.appendChild(body);
     content.appendChild(postImage);
     post.appendChild(commentContainer);
     commentContainer.appendChild(commentHeader);
-    commentContainer.appendChild(commentForm)
-    commentDiv.appendChild(commentTextarea)
-    commentDiv.appendChild(commentButton)
-    commentForm.appendChild(commentDiv)
+
+    const profileName = JSON.parse(window.localStorage.getItem('profile'))
+    if (profileName.name === postData.author.name) {
+        const editButton = document.createElement("a");
+        editButton.innerText = "Edit post"
+        editButton.setAttribute('href', `/pages/profile/post/edit/index.html?id=${postData.id}`);
+        postHeader.appendChild(editButton);
+    }
 
 // Fix post date
 

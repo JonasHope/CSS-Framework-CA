@@ -10,6 +10,11 @@ export function createPostFormListener () {
             const postData = Object.fromEntries(formData.entries())
 
             createPost(postData)
+
+            setTimeout(function() {
+                window.location.href = "/pages/feed/index.html"
+            }, 1000);
+            
         })
     }
 };
