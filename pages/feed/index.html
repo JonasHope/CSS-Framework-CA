@@ -14,7 +14,7 @@
         <nav class="navbar">
             <div class="container-fluid justify-content-center justify-content-sm-between flex-column flex-sm-row">
                 <div class="d-flex align-items-center flex-column flex-sm-row">
-                    <a href="home.html" class="navbar-brand fs-3 logo">Social network</a>
+                    <a href="/pages/feed/" class="navbar-brand fs-3 logo">Social network</a>
                     <div class="vertical mx-2 d-none d-sm-block"></div>
                     <div id="navbarNavAltMarkup">
                         <div class="navbar-nav d-flex flex-row">
@@ -41,11 +41,11 @@
                                 </svg>
                             </a>
                         </div>
-                    </div>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-primary" type="submit">Search</button>
+                    <form id="searchForm" class="d-flex">
+                        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button id="searchButton" class="btn btn-primary" type="submit">Search</button>
                     </form>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -89,8 +89,8 @@
         </div>
     </div>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/src/js/feed.mjs" type="module"></script>
   <script src="/src/js/index.mjs" type="module"></script>
+  <script src="/src/js/search.mjs" type="module"></script>
 
 </body>
 </html>

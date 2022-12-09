@@ -10853,4 +10853,8 @@ nav {
   font-weight: bold;
 }
 
+.hide {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

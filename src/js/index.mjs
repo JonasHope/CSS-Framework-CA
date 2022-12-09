@@ -15,7 +15,6 @@ import { createPostFormListener } from "./handlers/createPost.mjs"
 import { updateFormListener } from "./handlers/editPost.mjs";
 import { updateProfile } from "./handlers/updateProfile.mjs"; 
 
-
 const path = location.pathname;
 
 if (path === '/pages/profile/register/index.html') {

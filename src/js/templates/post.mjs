@@ -64,7 +64,7 @@ export function postTemplate(postData) {
     post.classList.add("posts", "card", "border-1", "my-5");
     
     image.classList.add("profileImage-Default", "p-0", "col-6");
-    author.classList.add("ms-2", "col-8");
+    author.classList.add("authorName", "ms-2", "col-8");
     postDate.classList.add("col-12", "text-end", "ms-2")
     postHeader.classList.add("purple", "p-2", "row", "m-0", "align-items-center")
     
@@ -139,10 +139,10 @@ export function postTemplate(postData) {
         commentContainer.appendChild(createComment);
         
 })
-
-    //console.log(postData)
+console.log(postData)
     return post;
 }
+
 
 
 export function renderPostTemplate(postData, parent) {
