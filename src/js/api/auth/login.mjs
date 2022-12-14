@@ -1,7 +1,7 @@
 import { API_SOCIAL_URL } from "../const.mjs";
-import * as storage from "../../storage/index.mjs"
+import * as storage from "../../storage/index.mjs";
 
-const path = "/auth/login"
+const path = "/auth/login";
 const method = "post";
 
 export async function login(profile) {
@@ -13,13 +13,18 @@ export async function login(profile) {
         },
         method,
         body
-    })
+    });
 
-    const { accessToken, ...user } = await response.json()
+    const { accessToken, ...user } = await response.json();
     
     storage.save("token", accessToken);
 
     storage.save("profile", user);
 
-    alert("You logged in successfully!")
-}
+    if (response.ok) {
+        alert("You logged in successfully! Click OK to proceed")
+        window.location.href = "/pages/feed/index.html"
+    }   else {
+        alert("Invalid email or password, try again.")
+        };
+};

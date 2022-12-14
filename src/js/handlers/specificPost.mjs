@@ -1,7 +1,7 @@
-import * as postMethods from "./api/posts/index.mjs"
-import { renderPostTemplate } from "./templates/index.mjs";
+import * as postMethods from "../api/posts/index.mjs"
+import { renderPostTemplate } from "../templates/post.mjs";
 
-async function viewPost() {
+export async function viewPost() {
     const params = new URLSearchParams(document.location.search)
     const id = params.get("id")
 
@@ -9,5 +9,3 @@ async function viewPost() {
     const container = document.querySelector("#specificPost");
     renderPostTemplate(posts, container);
     }
-
-viewPost()

@@ -6,13 +6,7 @@ const searchBar = document.querySelector('#search')
 searchBar.addEventListener("input", e => {
     const value = e.target.value.toLowerCase()
     let filteredPosts = posts.filter(function(post) {
-
-        return post.body?.includes(value) || post.title.includes(value) || post.author.name.includes(value)
-
-       /* const postBody = post.body && post.body.includes(value)
-        const postTitle = post.title.includes(value)
-        const postAuthor = post.author.name.includes(value)
-            return postBody || postTitle || postAuthor*/
+        return post.body?.includes(value) || post.title.includes(value) || post.author.name.toLowerCase().includes(value)
     })
 
     const postContainer = document.querySelector('#post')
@@ -24,12 +18,55 @@ searchBar.addEventListener("input", e => {
     }
 
     clearElement(postContainer)
-    console.clear()
 
     templates.renderPostTemplates(filteredPosts, postContainer)
     
 });
 
-    let posts = await postMethods.getPosts();
+let posts = await postMethods.getPosts();
+const postContainer = document.querySelector("#post")
+templates.renderPostTemplates(posts, postContainer)
+
+
+
+const sortOld = document.querySelector("#oldPosts")
+
+sortOld.onclick = function() {
+    sortPostsByOld()
+};
+
+async function sortPostsByOld() {
+
+    function clearElement(element) {
+        while (element.lastElementChild) {
+        element.removeChild(element.lastElementChild);
+        }
+    }
     const postContainer = document.querySelector("#post")
+    clearElement(postContainer)
+
+    let posts = await postMethods.getSortedPostsOld();
     templates.renderPostTemplates(posts, postContainer)
+}
+
+
+
+const sortNew = document.querySelector("#newPosts")
+
+sortNew.onclick = function() {
+    sortPostsByNew()
+};
+
+async function sortPostsByNew() {
+
+    function clearElement(element) {
+        while (element.lastElementChild) {
+        element.removeChild(element.lastElementChild);
+        }
+    }
+    const postContainer = document.querySelector("#post")
+    clearElement(postContainer)
+
+    let posts = await postMethods.getSortedPostsNew();
+    templates.renderPostTemplates(posts, postContainer)
+}

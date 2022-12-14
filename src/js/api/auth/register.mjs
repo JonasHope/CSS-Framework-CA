@@ -16,6 +16,13 @@ export async function register(profile) {
     })
 
     const result = await response.json()
-    alert("You registered successfully!")
+
+    if (response.ok) {
+        alert("You registered successfully!")
+        window.location.href = "../../../../index.html"
+    } else {
+        alert("The input value seems to be invalid, try again.")
+    }
+
     return(result)
 }

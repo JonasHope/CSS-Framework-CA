@@ -12,5 +12,9 @@ export async function createPost(postData) {
         body: JSON.stringify(postData)
     })
 
-    return await response.json()
+    if (response.ok) {
+        return await response.json()
+    } else {
+        alert("Something went wrong, probably invalid media URL. Please try again")
+    }
 }

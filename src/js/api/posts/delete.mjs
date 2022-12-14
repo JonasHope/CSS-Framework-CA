@@ -8,9 +8,9 @@ export async function removePost(id) {
     if (!id) {
         throw new Error("To delete a post, a postID is required")
     }
-    const updatePostURL = `${API_SOCIAL_URL}${action}/${id}`;
+    const DeletePostURL = `${API_SOCIAL_URL}${action}/${id}`;
 
-    const response = await authFetch(updatePostURL, {
+    const response = await authFetch(DeletePostURL, {
         method: method
     })
 
