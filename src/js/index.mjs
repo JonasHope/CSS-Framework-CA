@@ -5,22 +5,27 @@ import { updateFormListener } from "./handlers/editPost.mjs";
 import { updateProfile } from "./handlers/updateProfile.mjs"; 
 import { removingPost } from "./handlers/deletePost.mjs";
 import { viewPost } from "./handlers/specificPost.mjs";
+import { viewAllPosts } from "./handlers/search&viewPosts.mjs";
+import { filterPostsByNew, filterPostsByOld } from "./handlers/filterPosts.mjs";
 
 const path = location.pathname;
 
-if (path === '/pages/profile/register/') {
+if (path === '/pages/profile/register/' || path === '/pages/profile/register/index.html') {
     regFormListener();
 } else if (path === '/index.html') {
     loginFormListener();
 } else if (path === '/pages/feed/index.html' || path === '/pages/feed/') {
     createPostFormListener()
-} else if (path === '/pages/profile/post/edit/index.html') {
+    viewAllPosts()
+    filterPostsByOld()
+    filterPostsByNew()
+} else if (path === '/pages/profile/post/edit/index.html' || path === '/pages/profile/post/edit/') {
     updateFormListener()
-} else if (path === '/pages/profile/edit/index.html') {
+} else if (path === '/pages/profile/edit/index.html' || path === '/pages/profile/edit/') {
     updateProfile()
-} else if (path === '/pages/profile/post/delete/index.html') {
+} else if (path === '/pages/profile/post/delete/index.html' || path === '/pages/profile/post/delete/') {
     removingPost()
-} else if (path === '/pages/profile/post/') {
+} else if (path === '/pages/profile/post/' || path === '/pages/profile/post/index.html') {
     viewPost()
 }
 

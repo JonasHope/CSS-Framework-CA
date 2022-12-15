@@ -18,6 +18,7 @@ export function postTemplate(postData) {
     const title = document.createElement("strong");
     const body = document.createElement("p");
     const postImage = document.createElement("img");
+    const tagsContainer = document.createElement("div")
 
 // Create a comment on post section
     const commentContainer = document.createElement("div");
@@ -79,6 +80,7 @@ export function postTemplate(postData) {
     content.classList.add("card", "border-0", "px-3", "pt-2");
     title.classList.add("fs-6");
     postImage.classList.add("postImg");
+    tagsContainer.classList.add("d-flex")
 
 
 // Post comment section
@@ -114,6 +116,7 @@ export function postTemplate(postData) {
     content.appendChild(title);
     content.appendChild(body);
     content.appendChild(postImage);
+    content.appendChild(tagsContainer);
     post.appendChild(commentContainer);
     commentContainer.appendChild(commentHeader);
 
@@ -141,6 +144,17 @@ export function postTemplate(postData) {
     let result = dateUpdate.substring(0, 10);
     postDate.innerText = result;
 
+    
+        //displaying tags on posts
+
+        const postTags = postData.tags.filter(splitTags => splitTags.length)
+        if (postTags.length > 0) {
+            const tags = document.createElement("small")
+            tags.classList.add("card", "p-1", "m-1", "purple", "border-0")
+            tags.innerText = '#' + postTags
+            tagsContainer.appendChild(tags)
+        }
+
 
         // Displaying comments on posts
 
@@ -165,7 +179,7 @@ export function postTemplate(postData) {
         commentContainer.appendChild(createName);
         commentContainer.appendChild(createComment);
         })
-
+console.log(postData)
     return post;
 }
 
