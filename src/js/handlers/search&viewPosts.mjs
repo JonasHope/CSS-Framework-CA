@@ -19,7 +19,6 @@ searchBar.addEventListener("input", e => {
     
 });
 
-
     let posts = await postMethods.getPosts();
     const postContainer = document.querySelector("#post")
     templates.renderPostTemplates(posts, postContainer)
