@@ -86,7 +86,7 @@ export function postTemplate(postData) {
 
 // Post comment section
     commentContainer.classList.add("row", "align-items-center", "mx-3", "my-3", "p-2", "light-purple");
-    commentHeader.classList.add("fs-6", "col-12", "my-2", "text-center");
+    commentHeader.classList.add("fs-6", "col-12", "mb-1", "text-center");
 
 
             // Setting attributes
@@ -104,7 +104,7 @@ export function postTemplate(postData) {
     postDate.innerText = postData.created;
     title.innerText = postData.title;
     body.innerText = postData.body;
-    commentHeader.innerText = 'Comments ' + postData.comments.length;
+    commentHeader.innerText = 'Comments ' + '(' + postData.comments.length + ')';
     viewPost.innerText = 'View post';
 
 
