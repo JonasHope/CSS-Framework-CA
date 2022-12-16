@@ -2,6 +2,7 @@ import { postComment } from "../api/posts/comment.mjs";
 
 export function postTemplate(postData) {
  
+
         // All posts
 
 // Post header section
@@ -47,7 +48,7 @@ export function postTemplate(postData) {
     commentForm.appendChild(commentDiv)
 
             if (commentForm) {
-                commentForm.addEventListener('submit', (event) => {
+                commentForm.addEventListener('submit', async (event) => {
                     event.preventDefault()
 
                     const id = `${postData.id}`
@@ -55,11 +56,11 @@ export function postTemplate(postData) {
                     const post = Object.fromEntries(formData.entries())
                     post.id = id
 
-                    postComment(post);
+                    await postComment(post);
 
                     setTimeout(function() {
                     window.location.href = "/pages/feed/index.html"
-                    }, 1000);
+                    }, 1);
                 })
             }
 
@@ -87,14 +88,16 @@ export function postTemplate(postData) {
     commentContainer.classList.add("row", "align-items-center", "mx-3", "my-3", "p-2", "light-purple");
     commentHeader.classList.add("fs-6", "col-12", "my-2", "text-center");
 
+
             // Setting attributes
 
     image.setAttribute('src', postData.author.avatar);
     image.setAttribute('onerror', 'this.onerror=null;this.src="/images/man-in-suit-and-tie.png";');
     postImage.setAttribute('src', postData.media);
-    postImage.setAttribute('onerror', 'this.onerror=null; this.src="/images/placeholder.jpg"');
+    postImage.setAttribute('onerror', 'this.onerror=null; this.src="https://media.giphy.com/media/HBMCmtsPEUShG/giphy.gif"');
     viewPost.setAttribute('href', `/pages/profile/post/?id=${postData.id}`)
             
+
             // Setting innerText
 
     author.innerText = postData.author.name;
@@ -103,6 +106,7 @@ export function postTemplate(postData) {
     body.innerText = postData.body;
     commentHeader.innerText = 'Comments ' + postData.comments.length;
     viewPost.innerText = 'View post';
+
 
             // Appending children to parents
 
@@ -119,6 +123,7 @@ export function postTemplate(postData) {
     content.appendChild(tagsContainer);
     post.appendChild(commentContainer);
     commentContainer.appendChild(commentHeader);
+
 
         // Adding "edit" and "delete" post buttons
 
@@ -147,13 +152,17 @@ export function postTemplate(postData) {
     
         //displaying tags on posts
 
-        const postTags = postData.tags.filter(splitTags => splitTags.length)
-        if (postTags.length > 0) {
-            const tags = document.createElement("small")
-            tags.classList.add("card", "p-1", "m-1", "purple", "border-0")
-            tags.innerText = '#' + postTags
-            tagsContainer.appendChild(tags)
-        }
+            const postTags = postData.tags;
+
+            postTags.map((mapTags) => {
+            
+                if (mapTags.length > 0) {
+                    const tags = document.createElement("small")
+                    tags.classList.add("card", "p-1", "m-1", "purple", "border-0")
+                    tags.innerText = '#' + mapTags
+                    tagsContainer.appendChild(tags)
+                };
+            });
 
 
         // Displaying comments on posts
@@ -179,7 +188,6 @@ export function postTemplate(postData) {
         commentContainer.appendChild(createName);
         commentContainer.appendChild(createComment);
         })
-console.log(postData)
     return post;
 }
 

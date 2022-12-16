@@ -20,7 +20,7 @@ export async function updateProfile() {
 
         button.disabled = false;
 
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", async (event) => {
             event.preventDefault()
             const form = event.target;
             const formData = new FormData(form)
@@ -29,11 +29,13 @@ export async function updateProfile() {
             profile.name = name;
             profile.email = email;
 
-            updateProfileInfo(profile)
+            await updateProfileInfo(profile)
 
             setTimeout(function() {
                 window.location.href = "/pages/feed/index.html"
-            }, 2000);
+            }, 1);
         })
     }
+
+    
 };

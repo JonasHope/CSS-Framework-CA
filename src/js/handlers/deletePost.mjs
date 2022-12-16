@@ -7,13 +7,13 @@ export function removingPost() {
         deletePost()
     }
 
-    function deletePost() {
+    async function deletePost() {
         const url = new URL(location.href);
         const id = url.searchParams.get("id");
-        removePost(id)
+        await removePost(id)
 
         setTimeout(function() {
             window.location.href = "../../../feed/"
-        }, 1500) 
+        }, 1) 
     }
 }

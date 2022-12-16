@@ -19,18 +19,18 @@ export async function updateFormListener() {
 
         button.disabled = false;
 
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", async (event) => {
             event.preventDefault()
             const form = event.target;
             const formData = new FormData(form)
             const post = Object.fromEntries(formData.entries())
             post.id = id;
 
-            updatePost(post)
+            await updatePost(post)
 
             setTimeout(function() {
                 window.location.href = "/pages/feed/index.html"
-            }, 2000);
+            }, 1);
         })
     }
 };

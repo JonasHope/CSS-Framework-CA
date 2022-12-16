@@ -12,7 +12,7 @@ const path = location.pathname;
 
 if (path === '/pages/profile/register/' || path === '/pages/profile/register/index.html') {
     regFormListener();
-} else if (path === '/index.html') {
+} else if (path === '/index.html' || path === '/') {
     loginFormListener();
 } else if (path === '/pages/feed/index.html' || path === '/pages/feed/') {
     createPostFormListener()
