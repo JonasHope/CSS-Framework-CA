@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="home page">
+    <link rel="stylesheet" href="/dist/css/style.css">
+    <script src="https://kit.fontawesome.com/059c84c64c.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid justify-content-center justify-content-sm-between flex-column flex-sm-row">
+                <div class="d-flex align-items-center flex-column flex-sm-row">
+                    <a href="/pages/feed/" class="navbar-brand fs-3 logo">Social network</a>
+                    <div class="vertical mx-2 d-none d-sm-block"></div>
+                    <div id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-flex flex-row">
+                            <a class="nav-link mx-3 fs-5 active" aria-current="page" href="/pages/feed/index.html">Home</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex flex-row-reverse">
+                        <div id="logoutBtn" class="navbar-nav d-flex flex-row">
+                            <a class="nav-link mx-3 fs-6" href="../../index.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                                <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="navbar-nav d-flex flex-row">
+                            <a class="nav-link mx-3 fs-6" href="/pages/profile/edit/index.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    <form id="searchForm" class="d-flex">
+                        <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-sm-12 my-3">
+                    <h1 class="d-flex justify-content-center my-3 fs-2">Delete post request</h1>
+                    <div class="card border-0">
+                        <div class="mx-3 my-3">
+                            <div class="p-4">
+                                <h2 class="text-center fs-4">Are you sure you want to delete this post?</h2>
+                                <div class="d-flex justify-content-center m-4">
+                                    <button id="deleteButton" class="btn btn-danger p-3"><strong>Delete post</strong></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="/src/js/index.mjs" type="module"></script>
+    </body>
+</html>
